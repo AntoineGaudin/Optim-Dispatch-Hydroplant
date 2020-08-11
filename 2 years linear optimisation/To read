@@ -1,0 +1,39 @@
+In this folder, we look at the electricity price in Luzon, Philippines, for 2 years. The optimal dispatch is simulated.
+
+**Objective function**
+
+Maximize the revenue from the electricity sold, on the wholesale market, called WESM.
+Ancillary markets are not considered here.
+
+**Variables to optimize**
+
+Chg = Binary, is equal to 1 if the pump works in reverse, and electricity is consumed
+Dis = Binary, is equal to 1 if the pump discharge water, and electricity is produced
+P_Charge_kW = Continuous, is equal to the reverse Power in kW, used from the grid
+P_Discharge_kW = Continuous, is the Power sent to the grid, in kW
+Hydro_m3 = Continous, is the quantity of water in the reservoir, in m3.
+Hydro_flow_lost = Flow of Water not used for the electricity production and used from the reservoir, m3 per hour
+
+**Key inputs to the model**
+
+Electricity price, wholesale, Pesos/PhP per kWh.
+Rainfall, in m3 per hour. 
+Maximum/minumum ammount of water in the reservoir, m3. 
+Maximum/minimum power of the turbine, the minimum can be negative, kW.
+Starting/finishing ammount of water in the reservoir, m3. 
+Minimum water flow to be dispersed in the river, m3 per day. 
+Efficiency factor in the energy conversion (Kinetic Energy-Turbine-Electricity), no unit.
+Heigh of the dam, to calculate the kinetic energy of the water, meter. 
+
+**Constrains**
+
+Contrain on the maximum of P_Charge_kW  
+Contrain on the maximum of P_Discharge_kW
+No charge and discharge at the same time
+Minimum flow of water exiting to the river
+Formula to ensure contuinity of the water level
+Water level, m3, at the strat and end of the simulation
+
+
+**Files**
+All cleaned files and results are present in this folder. 
